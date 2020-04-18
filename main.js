@@ -32,11 +32,11 @@ function init(){
         const currentLeft= currentPage.querySelector('.hero .izquierda');
         const currentRight =currentPage.querySelector('.hero .derecha');
         const nextText =nextPage.querySelector('.details');
-        const portafolio =document.querySelector(".portafolio");
+        const contenedor =document.querySelector(".contenedor");
 
         const tl= new TimelineMax();
         tl.fromTo(currentLeft,0.3,{y:'-10%'},{y:"-100%"}).fromTo(currentRight,0.3,{y:'10%'},{y:"-100%"},"-=0.2")
-        .to(portafolio,0.3,{backgroundImage:backgrounds[pageNumber]})
+        .to(contenedor,0.3,{backgroundImage:backgrounds[pageNumber]})
         .fromTo(
             currentPage,
             0.3,
