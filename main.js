@@ -31,7 +31,6 @@ function init(){
         const nextRight =nextPage.querySelector('.hero .derecha');
         const currentLeft= currentPage.querySelector('.hero .izquierda');
         const currentRight =currentPage.querySelector('.hero .derecha');
-        const nextText =nextPage.querySelector('.details');
         const contenedor =document.querySelector(".contenedor");
 
         const tl= new TimelineMax();
@@ -49,8 +48,9 @@ function init(){
         .set(nextRight,{clearProps:"all"});
         current=pageNumber;
     };
-//Opcional
+    
 document.addEventListener('wheel',throttle(scrollChange,1500));
+document.addEventListener('touchmove',throttle(scrollChange,1500));
 
 function switchDots(dotNumber){
     const activeDot=slides[dotNumber];
